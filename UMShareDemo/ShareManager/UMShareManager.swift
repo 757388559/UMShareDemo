@@ -25,13 +25,11 @@ class UMShareManager: NSObject {
         // 微博
         UMSocialManager.default().setPlaform(UMSocialPlatformType.sina, appKey: "", appSecret: "", redirectURL: "")
         
-        
     }
     
     func shareImageText(platformType: UMSocialPlatformType) {
         let messageObject = UMSocialMessageObject()
         messageObject.text = "社会化组件UShare将各大社交平台接入您的应用，快速武装App。"
-        
         // 图片
         let imageObject = UMShareImageObject()
         // 缩略图
@@ -52,7 +50,7 @@ class UMShareManager: NSObject {
     
     
     
-    func showShareUI() {
+    static func showShareUI() {
         
         // 设置显示的平台
         UMSocialUIManager.setPreDefinePlatforms([UMSocialPlatformType.sina, UMSocialPlatformType.wechatSession, UMSocialPlatformType.wechatTimeLine])
